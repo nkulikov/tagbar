@@ -1703,7 +1703,7 @@ function! s:OpenWindow(flags) abort
     endif
 
     let eventignore_save = &eventignore
-    set eventignore=all
+"    set eventignore=all
 
     let openpos = g:tagbar_left ? 'topleft vertical ' : 'botright vertical '
     exe 'silent keepalt ' . openpos . g:tagbar_width . 'split ' . '__Tagbar__'
@@ -2511,7 +2511,7 @@ function! s:RenderContent(...) abort
     let lazyredraw_save = &lazyredraw
     set lazyredraw
     let eventignore_save = &eventignore
-    set eventignore=all
+"    set eventignore=all
 
     setlocal modifiable
 
@@ -3556,7 +3556,7 @@ function! s:winexec(cmd) abort
     call s:LogDebugMessage("Executing without autocommands: " . a:cmd)
 
     let eventignore_save = &eventignore
-    set eventignore=BufEnter
+"    set eventignore=BufEnter
 
     execute a:cmd
 
